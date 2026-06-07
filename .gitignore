@@ -1,0 +1,22 @@
+# Python
+**/__pycache__/
+*.pyc
+
+# Virtual envs
+**/venv/
+**/venom/
+
+# Frontend
+frontend/node_modules/
+
+# AI project
+skin_cancer_ai/data/
+skin_cancer_ai/models/
+skin_cancer_ai/results/
+skin_cancer_ai/uploads/
+
+# оставить только gitignore
+skin_cancer_ai/*
+!skin_cancer_ai/*.py
+!skin_cancer_ai/*.txt
+!skin_cancer_ai/*.md

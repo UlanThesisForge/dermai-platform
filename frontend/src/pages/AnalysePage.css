@@ -1,0 +1,167 @@
+/* AnalysePage.css */
+.analyse-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.analyse-left { display: flex; flex-direction: column; gap: 14px; }
+.analyse-right { display: flex; flex-direction: column; gap: 14px; }
+
+/* Upload card */
+.upload-card { padding: 0; overflow: hidden; }
+
+.drop-zone {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  transition: all 0.2s;
+  padding: 40px;
+  text-align: center;
+}
+.drop-zone:hover, .drop-zone.dragging {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+.drop-icon { color: var(--text-muted); margin-bottom: 6px; }
+.drop-title { font-size: 0.95rem; font-weight: 500; }
+.drop-sub { font-size: 0.85rem; color: var(--text-secondary); }
+.drop-hint { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
+
+/* Preview */
+.preview-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 12px;
+}
+.preview-img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+}
+.gradcam-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.gradcam-hint { font-size: 0.78rem; color: var(--text-muted); }
+.preview-filename { font-size: 0.8rem; color: var(--text-muted); }
+
+/* Actions */
+.analyse-actions { display: flex; gap: 10px; }
+
+/* Error */
+.error-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--danger-dim);
+  border: 1px solid rgba(239,68,68,.3);
+  border-radius: var(--radius-md);
+  color: #f87171;
+  font-size: 0.875rem;
+}
+
+/* No result */
+.no-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  gap: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+.no-result-icon { font-size: 2.5rem; }
+
+/* Loading */
+.loading-card {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Result */
+.result-panel { display: flex; flex-direction: column; gap: 14px; }
+
+.diagnosis-card { }
+.diagnosis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.diagnosis-class { font-size: 2rem; font-weight: 700; font-family: var(--font-mono); }
+.diagnosis-name  { font-size: 1rem; color: var(--text-secondary); margin-top: 4px; }
+.diagnosis-conf { text-align: right; }
+.conf-val { font-size: 2rem; font-weight: 700; font-family: var(--font-mono); }
+.conf-lbl { font-size: 0.78rem; color: var(--text-secondary); }
+
+.risk-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: currentColor; flex-shrink: 0;
+  display: inline-block; margin-right: 4px;
+  vertical-align: middle;
+}
+
+.warning-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--danger-dim);
+  border: 1px solid rgba(239,68,68,.25);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  color: #fca5a5;
+  line-height: 1.5;
+}
+
+/* Prob bars */
+.prob-list { display: flex; flex-direction: column; gap: 10px; }
+.prob-row { display: flex; align-items: center; gap: 10px; font-size: 0.875rem; }
+.prob-cls { width: 44px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); }
+.prob-bar-bg { flex: 1; background: var(--bg-elevated); border-radius: 4px; height: 8px; overflow: hidden; }
+.prob-bar-fill { height: 8px; border-radius: 4px; transition: width 0.8s ease; }
+.prob-val { width: 46px; text-align: right; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); }
+
+/* Meta */
+.meta-card { padding: 16px 20px; }
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.875rem;
+}
+.meta-row:last-child { border-bottom: none; }
+.meta-lbl { color: var(--text-secondary); }
+.meta-val { font-size: 0.85rem; }
+
+/* Disclaimer */
+.disclaimer {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .analyse-grid { grid-template-columns: 1fr; }
+}
