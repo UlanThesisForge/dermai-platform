@@ -10,6 +10,7 @@ passlib==1.7.4
 bcrypt==4.0.1
 python-multipart==0.0.9
 pillow==10.3.0
+pandas>=2.0.0
 numpy>=1.23.5,<2.0
 tensorflow==2.15.0
 opencv-python-headless==4.9.0.80

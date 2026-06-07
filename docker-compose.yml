@@ -31,6 +31,7 @@ services:
     volumes:
       - ./backend:/app
       - ./models:/app/../models
+      - ./skin_cancer_ai/data:/data/ham10000:ro
       - uploads_data:/app/uploads
     depends_on:
       postgres:
